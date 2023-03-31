@@ -1,0 +1,12 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: springboot-schedule
+
+springboot-xl:
+  schedule:
+    thread-real:
+      cron: '0 0 10 * * ?'
+      springboot-start-trigger: true

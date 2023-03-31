@@ -1,0 +1,24 @@
+server:
+    port: 8085
+
+spring:
+    application:
+        name: springboot-iot
+
+springboot-xl:
+    swagger:
+        enabled: true
+        author: lei.xu
+        group: MQTT测试
+        version: 1.0
+        title: MQTT测试
+        description: MQTT测试
+        base-package: priv.xl.springboot.iot
+    mqtt:
+        url: tcp://localhost:1883
+        client-id: mqtt_client
+        topics: topic_00,topic_01,/up/gateway/WG583LL0722063001434,/down/gateway/WG583LL0722063001434, /up/gateway/alarm-test
+        username: admin
+        password: Gundam00
+        timeout: 10
+        keepalive: 20
