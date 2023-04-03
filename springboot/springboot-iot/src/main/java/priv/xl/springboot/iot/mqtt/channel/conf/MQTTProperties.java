@@ -1,4 +1,4 @@
-package priv.xl.springboot.iot.mqtt.conf;
+package priv.xl.springboot.iot.mqtt.channel.conf;
 
 import lombok.Getter;
 import lombok.Setter;

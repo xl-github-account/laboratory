@@ -1,4 +1,4 @@
-package priv.xl.springboot.iot.mqtt.conf;
+package priv.xl.springboot.iot.mqtt.channel.conf;
 
 import lombok.RequiredArgsConstructor;
 import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
@@ -15,7 +15,7 @@ import org.springframework.integration.mqtt.outbound.MqttPahoMessageHandler;
 import org.springframework.integration.mqtt.support.DefaultPahoMessageConverter;
 import org.springframework.messaging.*;
 import priv.xl.springboot.iot.mqtt.enums.WTBLGatewayTopicEnum;
-import priv.xl.springboot.iot.mqtt.handle.MQTTMessageHandle;
+import priv.xl.springboot.iot.mqtt.channel.handle.MQTTMessageHandle;
 
 /**
  * Description: MQTT配置
@@ -25,7 +25,7 @@ import priv.xl.springboot.iot.mqtt.handle.MQTTMessageHandle;
  * @since 2023/3/28 3:05 下午
  * © Copyright 川谷汇（北京）数字科技有限公司 Corporation All Rights Reserved.
  */
-@Configuration
+//@Configuration
 @RequiredArgsConstructor
 @EnableConfigurationProperties(MQTTProperties.class)
 public class MQTTConfig {

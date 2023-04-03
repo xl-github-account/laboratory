@@ -2,9 +2,8 @@ package priv.xl.springboot.iot.mqtt.task;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.scheduling.annotation.Scheduled;
-import org.springframework.stereotype.Component;
-import priv.xl.springboot.iot.mqtt.conf.MQTTGateway;
-import priv.xl.springboot.iot.mqtt.conf.MQTTProperties;
+import priv.xl.springboot.iot.mqtt.channel.conf.MQTTGateway;
+import priv.xl.springboot.iot.mqtt.channel.conf.MQTTProperties;
 
 /**
  * 虚拟设备

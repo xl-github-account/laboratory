@@ -1,4 +1,4 @@
-package priv.xl.springboot.iot.mqtt.handle;
+package priv.xl.springboot.iot.mqtt.channel.handle;
 
 import cn.hutool.core.date.DatePattern;
 import cn.hutool.core.date.DateUtil;
@@ -7,8 +7,6 @@ import org.springframework.messaging.MessageHandler;
 import org.springframework.messaging.MessageHeaders;
 import org.springframework.messaging.MessagingException;
 import org.springframework.util.Assert;
-import priv.xl.springboot.iot.mqtt.dao.Device01Dao;
-import priv.xl.springboot.iot.mqtt.entity.Device01Entity;
 import priv.xl.springboot.iot.mqtt.enums.WTBLGatewayTopicEnum;
 
 import java.util.Date;
@@ -39,10 +37,10 @@ public class MQTTMessageHandle implements MessageHandler {
 
         SpringContextUtil.getBean(Device01Dao.class).add(device);*/
 
-        MessageHeaders messageHeaders = message.getHeaders();
+        /*MessageHeaders messageHeaders = message.getHeaders();
         String topic = messageHeaders.get("mqtt_receivedTopic", String.class);
 
-        System.out.println("============================= 接收到MQTT消息 =============================");
+        System.out.println("============================= 管道模式接收到MQTT消息 =============================");
         switch (WTBLGatewayTopicEnum.match(topic)) {
             case Up_Topic:
                 System.out.println("上行主题");
@@ -62,7 +60,7 @@ public class MQTTMessageHandle implements MessageHandler {
         Assert.notNull(ts, "时间戳为空");
         System.out.println("消息时间戳: " + DateUtil.format(new Date(ts), DatePattern.NORM_DATETIME_MS_PATTERN));
         System.out.println("消息QOS: " + messageHeaders.get("mqtt_receivedQos", Integer.class));
-        System.out.println("消息内容: " + message.getPayload());
+        System.out.println("消息内容: " + message.getPayload());*/
     }
 
 }

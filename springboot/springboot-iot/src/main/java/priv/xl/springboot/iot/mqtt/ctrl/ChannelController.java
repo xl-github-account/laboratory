@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import priv.xl.springboot.core.web.http.HttpResult;
-import priv.xl.springboot.iot.mqtt.conf.MQTTGateway;
+import priv.xl.springboot.iot.mqtt.channel.conf.MQTTGateway;
 import priv.xl.toolkit.id.IDGenerator;
 
 /**
@@ -22,21 +22,13 @@ import priv.xl.toolkit.id.IDGenerator;
  * @since 2023/3/28 3:18 下午
  * © Copyright 川谷汇（北京）数字科技有限公司 Corporation All Rights Reserved.
  */
-@Api(tags = "MQTT REST API")
+@Api(tags = "MQTT管道模式 REST API")
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/test/mqtt")
-public class TestController {
+@RequestMapping("/mqtt/channel-mode")
+public class ChannelController {
 
     private final MQTTGateway mqttGateway;
-
-    @ApiOperation("发送数据")
-    @PostMapping("/send")
-    public HttpResult send(@ApiParam(value = "主题", required = true) @RequestParam String topic,
-                           @ApiParam(value = "消息内容", required = true) @RequestParam String data) {
-        this.mqttGateway.sendToMqtt("topic_00", data);
-        return HttpResult.success();
-    }
 
     @ApiOperation("灯控开关")
     @PostMapping("/light-switch")

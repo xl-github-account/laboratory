@@ -1,4 +1,4 @@
-package priv.xl.springboot.iot.mqtt.conf;
+package priv.xl.springboot.iot.mqtt.channel.conf;
 
 import org.springframework.integration.annotation.MessagingGateway;
 import org.springframework.integration.mqtt.support.MqttHeaders;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
  * @author lei.xu
  * @since 2023/3/29 4:03 下午
  */
-@Component
+//@Component
 @MessagingGateway(defaultRequestChannel = "mqttOutboundChannel")
 public interface MQTTGateway {
 
