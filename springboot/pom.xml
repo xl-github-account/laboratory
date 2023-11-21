@@ -20,9 +20,7 @@
 
     <modules>
         <module>springboot-core</module>
-        <module>springboot-reactor</module>
         <module>springboot-schedule</module>
-        <module>springboot-iot</module>
     </modules>
 
     <properties>

@@ -21,7 +21,6 @@
         <module>springboot-core-web</module>
         <module>springboot-core-minio</module>
         <module>springboot-core-common</module>
-        <module>springboot-core-database</module>
         <module>springboot-core-redis</module>
     </modules>
 
